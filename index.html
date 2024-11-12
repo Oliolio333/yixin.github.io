@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pikachu Introduction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfd96;
+      color: #555;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ffcb05;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    .image-container {
+      margin: 20px 0;
+    }
+    img {
+      width: 200px;
+      border-radius: 10px;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    button {
+      background-color: #ffcb05;
+      color: #555;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 5px;
+    }
+    #character-info {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meet Pikachu!</h1>
+  <div class="image-container">
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Pokémon_Pikachu_art.png" alt="Pikachu Image">
+  </div>
+  <p>Pikachu is an Electric-type Pokémon known for its cute appearance and signature move, Thunderbolt!</p>
+
+  <div class="button-container">
+    <button onclick="showInfo('trait')">Pikachu's Traits</button>
+    <button onclick="showInfo('charmander')">Meet Charmander</button>
+    <button onclick="showInfo('bulbasaur')">Meet Bulbasaur</button>
+    <button onclick="showInfo('squirtle')">Meet Squirtle</button>
+  </div>
+
+  <div id="character-info"></div>
+
+  <script>
+    function showInfo(character) {
+      const infoBox = document.getElementById('character-info');
+
+      const info = {
+        trait: "Pikachu is brave, friendly, and fiercely loyal to its friends. Its Thunderbolt attack is powerful enough to take down strong opponents!",
+        charmander: "Charmander is a Fire-type Pokémon known for its fiery tail. As it evolves, it gains even more fire-based abilities!",
+        bulbasaur: "Bulbasaur is a Grass/Poison-type Pokémon, often seen with a plant bulb on its back. It grows into a beautiful flower as it evolves.",
+        squirtle: "Squirtle is a Water-type Pokémon. Its strong shell and water attacks make it a versatile and loyal companion in battle."
+      };
+
+      infoBox.innerHTML = `<p>${info[character]}</p>`;
+    }
+  </script>
+</body>
+</html>
+
+
